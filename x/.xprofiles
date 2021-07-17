@@ -1,0 +1,4 @@
+# Environment variables set everywhere
+export EDITOR="nvim"
+export TERMINAL="kitty"
+export BROWSER="chromium"

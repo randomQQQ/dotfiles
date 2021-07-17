@@ -1,0 +1,15 @@
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+#		   			Window	  	  Border	 	 Separator
+rofi.color-window: #101010, #899ca1, #dbdbdb
+
+#		  			 Background	  Foreground	 Alt Background Highlight Bg   Highlight Fg
+rofi.color-normal: #101010, #899ca1, argb:00486883, #899ca1, #101010
+rofi.color-active: #899ca1, #899ca1, #899ca1, #899ca1, #899ca1
+rofi.color-urgent: #899ca1, #899ca1, #899ca1, #899ca1, #899ca1
+
+
+rofi.font: Ubuntu Mono 12
+rofi.hide-scrollbar: true

@@ -1,0 +1,180 @@
+# КЛАВИША МОДИФИКАТОР
+set $mod Mod1
+
+# АВТОЗАПУСК
+exec --no-startup-id compton --config ~/.config/compton.conf -b
+exec --no-startup-id numlockx
+exec --no-startup-id polybar example
+exec --no-startup-id nitrogen --restore
+exec xset r rate 210 40 
+
+exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
+exec kitty 
+exec kitty
+exec telegram-desktop
+exec chromium
+
+# ПРИЛОЖЕНИЯ В ФОКУСЕ
+assign [class="Chromium"] $ws2
+
+# Переместить окно
+#floating_modifier $mod
+
+# ПРИВЯЗКА К ВОРКСПЕЙСАМ
+assign [class="Chromium"] $ws2
+assign [class="TelegramDesktop"] $ws2
+assign [class="Code - Insiders"] $ws3
+assign [class="hyper"] $ws1
+assign [class="slack"] $ws9
+assign [class="discord"] $ws9
+assign [class="zoom"] $ws9
+
+# Нет фокуса при наведении мыши 
+focus_follows_mouse no
+
+# Громкость
+bindsym XF86AudioMute "exec amixer -D pulse sset Master toggle && notify-send \"Volume\" \"Sound is (un)muted\" --urgency low"
+bindsym XF86AudioRaiseVolume "exec amixer -D pulse sset Master 5%+ && notify-send \"Volume\" \"Volume added +5%\n    Volume level is now $(amixer -D pulse get Master | awk -F 'Left:|[][]' 'BEGIN {RS=\"\"}{ print $3 }')\" --urgency low"
+bindsym XF86AudioLowerVolume "exec amixer -D pulse sset Master 5%- && notify-send \"Volume\" \"Volume added -5%\n    Volume level is now $(amixer -D pulse get Master | awk -F 'Left:|[][]' 'BEGIN {RS=\"\"}{ print $3 }')\" --urgency low"
+
+# Яркость
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+
+bindsym Print exec flameshot gui
+
+# ЗАПУСК 
+bindsym $mod+Return exec kitty
+bindsym $mod+g exec chromium
+
+# ЗАКРЫТЬ ОКНО
+bindsym $mod+Shift+q kill
+
+# ЗАПУСК DMENU ИЛИ ROFI
+bindsym $mod+d exec --no-startup-id rofi -show run
+
+# СМЕНА ФОКУСА НА ДРУГОЕ ОКНО
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# АЛЬТЕРНАТИВНАЯ СМЕНА ФОКУСА НА ДРУГОЕ ОКНО
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right  
+
+# ГОРИЗОНТАЛЬНАЯ ОРИЕНТАЦИЯ НОВОГО ОКНА
+bindsym $mod+u split h
+
+# ВЕРТИКАЛЬНАЯ ОРИЕНТАЦИЯ НОВОГО ОКНА
+bindsym $mod+v split v
+
+# ПЕРЕМЕЩЕНИЕ ФОКУСНОГО ОКНА
+bindsym $mod+Shift+h move left 20px
+bindsym $mod+Shift+j move down 20px
+bindsym $mod+Shift+k move up 20px
+bindsym $mod+Shift+l move right 20px
+
+
+# ФУЛЛСКРИН
+bindsym $mod+f fullscreen toggle
+
+# КОРОЧ ВЕЩЬ КОТОРАЯ МЕНЯЕТ ТИП КОНТЕЙНЕРА,
+# ЭТО КОГДА НЕСКОЛЬКО ОКОН КАК В БРАУЗЕРЕ СКЛАДЫВАЮТСЯ,
+# А ЗАГОЛОВКИ КАК ВКЛАДКИ
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# СДЕЛАТЬ ОКНО ПЛАВАЮЩИМ
+bindsym $mod+Shift+space floating toggle
+
+# ПЕРЕКЛЮЧЕНИЕ ФОКУСА С ПЛАВАЮЩИХ ОКОН НА ТАЙЛИНГ
+bindsym $mod+space focus mode_toggle
+
+# ЯХЗ ЧТО ЭТО ТАКОЕ
+bindsym $mod+a focus parent
+
+# ЭТО НЕ НУЖНО РАСКОМЕНТИРОВАТЬ, КОМБИНАЦИЯ КЛАВИШ КОПИРУЕТ
+# КОМБИНАЦИЮ КЛАВИШЬ ЗАПУСКА DMENU
+#bindsym $mod+d focus child
+
+# ГАПСЫ
+gaps inner 15
+gaps outer 8
+
+smart_gaps on
+
+#ШРИФТЫ
+font pango:monospace 8
+#font pango: JetBrains Mono 10
+
+# ОТКЛЮЧЕНИЕ ЗАГОЛОВКА ОКНА
+default_border pixel
+
+# РАЗМЕР РАМОК ОКНА
+#for_window [tiling] border pixel 2
+for_window [class=".*"] border pixel 2
+
+# ОТКЛЮЧЕНИЕ РАМОК ДЛЯ ПОЛНОЭКРАННЫХ ПРИЛОЖЕНИЙ
+smart_borders on
+
+# ЦВЕТ РАМОК
+#                       Рамка   Фон     Индикатор Родительская_рамка
+client.focused			#CBCAD0 #828282 #CBCAD0 #1c1b22
+client.focused_inactive	#1c1b22 #1c1b22 #1c1b22 #1c1b22
+client.unfocused		#1c1b22 #1c1b22 #1c1b22 #1c1b22
+client.urgent			#1c1b22 #1c1b22 #1c1b22 #1c1b22
+client.placeholder		#1c1b22 #1c1b22 #1c1b22 #1c1b22
+
+#	client.focused — окно в фокусе
+#	client.unfocused — окно вне фокуса
+#	client.focused_inactive — окно в фокусе но не активно
+#	client.urgent — окно требует внимания (всплывающее) 
+# ИМЕНА ВОРКСПЕЙСОВ И ИХ НОМЕРА
+set $ws1 "1_"
+set $ws2 "2_"
+set $ws3 "3_"
+set $ws4 "4_"
+set $ws5 "5_#"
+set $ws6 "6_#"
+set $ws7 "7_#"
+set $ws8 "8_#"
+set $ws9 "9_"
+set $ws10 "10_#"
+
+# ПЕРЕКЛЮЧЕНИЕ ВОРКСПЕЙСОВ
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# ПЕРЕМЕЩЕНИЕ ОКНА НА ДРУГОЙ ВОРКСЕПАЙС
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+
+
+# ПЕРЕЗАГРУЗИТЬ КОНФИГ
+bindsym $mod+p reload 
+
+# ПЕРЕЗАГРУСКА I3 ПОСЛЕ ПРАВОК КОНФИГА С СОХРАНЕНИЕМ СЕАНСА
+bindsym $mod+Shift+r restart
+
+# ВЫХОД ИЗ I3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+Ctrl+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Up resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Down resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+Right resize grow width 10 px or 10 ppt
