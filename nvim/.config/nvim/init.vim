@@ -37,6 +37,7 @@ set encoding=utf-8              " UTF-8 encoding
 set ignorecase                  " ignore case when searching
 "set cursorline                  " highlight the current line
 set noshowmode                  " hide the default mode text
+"set spell spelllang=ru
 
 " ================ Indentation ======================
 
