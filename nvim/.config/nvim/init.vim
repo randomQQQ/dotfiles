@@ -62,8 +62,18 @@ map <C-n> :NERDTreeToggle<CR>
 nmap <leader>w :w!<cr>
 map <C-n> :RnvimrToggle<CR>
 map <F1> :w !python3<CR>
+nnoremap 0p "0p
+nnoremap <leader>v <c-v>
 
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
 
+noremap <silent> <C-Left> :vertical resize +5<CR>
+noremap <silent> <C-Right> :vertical resize -5<CR>
+
+" ================ coc-vim ==========================
 
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
@@ -231,4 +241,15 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+" ================ rnvimr =======================
+
+let g:rnvimr_action = {
+            \ '<C-t>': 'NvimEdit tabedit',
+            \ '<C-x>': 'NvimEdit split',
+            \ '<C-p>': 'NvimEdit vsplit',
+            \ 'gw': 'JumpNvimCwd',
+            \ 'yw': 'EmitRangerCwd'
+            \ }
 
