@@ -8,6 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kevinhwang91/rnvimr'
@@ -56,15 +58,14 @@ set nowb
 
 set clipboard=unnamedplus
 
-
 " ================ Mapping ==========================
 let g:mapleader=" "  
 map <C-n> :NERDTreeToggle<CR>
-nmap <leader>w :w!<cr>
+nmap <leader>w :w!<CR>
 map <C-n> :RnvimrToggle<CR>
 map <F1> :w !python3<CR>
 nnoremap 0p "0p
-nnoremap <leader>v <c-v>
+nnoremap <leader>v <C-v>
 
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
@@ -74,7 +75,8 @@ nnoremap <C-H> <C-W>h
 noremap <silent> <C-Left> :vertical resize +5<CR>
 noremap <silent> <C-Right> :vertical resize -5<CR>
 
-" ================ rnvimr =======================
+nnoremap <C-u> viwU<Esc>
+" =================== rnvimr ========================
 
 let g:rnvimr_action = {
             \ '<C-t>': 'NvimEdit tabedit',
@@ -85,4 +87,7 @@ let g:rnvimr_action = {
             \ }
 
 
+" ================ coc-vim ==========================
+
+source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/coc.vim
