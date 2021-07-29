@@ -1,3 +1,6 @@
+nnoremap <silent> <leader>t :Files<cr>
+nnoremap <silent> <Leader>r :Rg<CR>
+
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',

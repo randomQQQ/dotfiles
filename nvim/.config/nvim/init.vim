@@ -8,6 +8,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'lyokha/vim-xkbswitch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
@@ -41,6 +42,7 @@ set ignorecase                  " ignore case when searching
 "set cursorline                  " highlight the current line
 set noshowmode                  " hide the default mode text
 "set spell spelllang=ru
+set clipboard=unnamedplus
 
 " ================ Indentation ======================
 
@@ -56,16 +58,17 @@ set noswapfile
 set nobackup
 set nowb
 
-set clipboard=unnamedplus
-
 " ================ Mapping ==========================
+
 let g:mapleader=" "  
-map <C-n> :NERDTreeToggle<CR>
 nmap <leader>w :w!<CR>
 map <C-n> :RnvimrToggle<CR>
 map <F1> :w !python3<CR>
+
+nnoremap <silent> <BS> :nohlsearch<CR>
 nnoremap 0p "0p
 nnoremap <leader>v <C-v>
+nnoremap <C-u> viwU<Esc>
 
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
@@ -75,8 +78,12 @@ nnoremap <C-H> <C-W>h
 noremap <silent> <C-Left> :vertical resize +5<CR>
 noremap <silent> <C-Right> :vertical resize -5<CR>
 
-nnoremap <C-u> viwU<Esc>
-" =================== rnvimr ========================
+nnoremap ' `
+nnoremap ` '
+
+nnoremap H 0
+nnoremap L $
+" ================ rnvimr =========================
 
 let g:rnvimr_action = {
             \ '<C-t>': 'NvimEdit tabedit',
@@ -86,8 +93,14 @@ let g:rnvimr_action = {
             \ 'yw': 'EmitRangerCwd'
             \ }
 
-
 " ================ coc-vim ==========================
 
 source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/coc.vim
+
+" ================ xkb-switch =======================
+
+let g:XkbSwitchEnabled = 1
+let g:XkbSwitchIMappings = ['ru']
+
+ 
