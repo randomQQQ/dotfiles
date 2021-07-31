@@ -8,6 +8,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'dracula/vim'
 Plug 'lyokha/vim-xkbswitch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -28,6 +29,8 @@ call plug#end()
 
 " ================ Color theme =======================
 
+" colorscheme dracula
+" set background=dark
 colorscheme OceanicNext             
 set termguicolors
 syntax on                       
@@ -78,8 +81,8 @@ nnoremap <C-H> <C-W>h
 noremap <silent> <C-Left> :vertical resize +5<CR>
 noremap <silent> <C-Right> :vertical resize -5<CR>
 
-nnoremap ' `
-nnoremap ` '
+" nnoremap ' `
+" nnoremap ` '
 
 nnoremap H 0
 nnoremap L $
@@ -103,4 +106,3 @@ source $HOME/.config/nvim/coc.vim
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']
 
- 
