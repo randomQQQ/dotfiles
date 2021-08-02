@@ -8,23 +8,25 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+Plug 'kaicataldo/material.vim', {'branch': 'main'}
+Plug 'romgrk/barbar.nvim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'hoob3rt/lualine.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'kyazdani42/nvim-web-devicons' 
 Plug 'kyazdani42/nvim-tree.lua'
-
 Plug 'lyokha/vim-xkbswitch'
 Plug 'tpope/vim-commentary'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'wincent/terminus'
-Plug 'sainnhe/everforest'
-Plug 'mhartington/oceanic-next'
 Plug 'rakr/vim-one'
 Plug 'jiangmiao/auto-pairs'
-Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'mattn/webapi-vim'
 
@@ -32,18 +34,18 @@ call plug#end()
 
 " ================ Color theme =======================
 
-" set background=dark
-colorscheme one
-" colorscheme OceanicNext             
+let g:material_theme_style = 'palenight'
+colorscheme material
+" colorscheme one
 set termguicolors
+set background=dark
 syntax on                       
-let g:lightline = {'colorscheme' : 'everforest'}
 
 " ================ General Config ====================
   
 set laststatus=2                " status line
 set number                      " always show line numbers
-set encoding=utf-8              " UTF-8 encoding
+set encoding=UTF-8
 set ignorecase                  " ignore case when searching
 "set cursorline                  " highlight the current line
 set noshowmode                  " hide the default mode text
@@ -109,8 +111,9 @@ nnoremap <C-n> :NvimTreeToggle<CR>
 
 " ================ Telescope ========================
 
-nnoremap <leader>t <cmd>Telescope find_files<cr>
-nnoremap <leader>r <cmd>Telescope live_grep<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fa <cmd>Telescope live_grep<cr>
+nnoremap <leader>fm <cmd>Telescope marks<cr>
 
 lua << EOF
 require('telescope').setup({
@@ -118,7 +121,7 @@ require('telescope').setup({
     vimgrep_arguments = {
       'rg',
       '--color=never',
-      '--no-heading',
+      '--no-heading',   
       '--with-filename',
       '--line-number',
       '--column',
@@ -145,3 +148,73 @@ require('telescope').setup({
   }
 })
 EOF
+
+" ================ Colorizer ========================
+
+lua << EOF
+require'colorizer'.setup(
+  {'*';},
+  {
+      RGB      = true;         -- #RGB hex codes
+	  RRGGBB   = true;         -- #RRGGBB hex codes
+	  RRGGBBAA = true;         -- #RRGGBBAA hex codes
+      names    = true;         -- "Name" codes like Blue
+	  rgb_fn   = true;         -- CSS rgb() and rgba() functions
+	  hsl_fn   = true;         -- CSS hsl() and hsla() functions
+	  css      = true;         -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+	  css_fn   = true;         -- Enable all CSS *functions*: rgb_fn, hsl_fn
+  })
+EOF
+
+" ================ Barbar ===========================
+
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+nnoremap <silent>    <A-c> :BufferClose<CR>
+
+let bufferline = get(g:, 'bufferline', {})
+" Enable/disable animations
+let bufferline.animation = v:true
+" Enable/disable current/total tabpages indicator (top right corner)
+let bufferline.tabpages = v:false
+
+let bufferline.icon_close_tab = 'x'
+let bufferline.icon_close_tab_modified = '●'
+
+let bg_current = get(nvim_get_hl_by_name('Normal',     1), 'background', '#000000')
+let bg_visible = get(nvim_get_hl_by_name('TabLineSel', 1), 'background', '#000000')
+let bg_inactive = get(nvim_get_hl_by_name('TabLine',   1), 'background', '#000000')
+
+" For the current active buffer
+hi default link BufferCurrent      Normal
+" For the current active buffer when modified
+hi default link BufferCurrentMod   Normal
+" For the current active buffer icon
+hi default link BufferCurrentSign  Normal
+" For the current active buffer target when buffer-picking
+exe 'hi default BufferCurrentTarget   guifg=red gui=bold guibg=' . bg_current
+
+" For buffers visible but not the current one
+hi default link BufferVisible      TabLineSel
+hi default link BufferVisibleMod   TabLineSel
+hi default link BufferVisibleSign  TabLineSel
+exe 'hi default BufferVisibleTarget   guifg=red gui=bold guibg=' . bg_visible
+
+" For buffers invisible buffers
+hi default link BufferInactive     TabLine
+hi default link BufferInactiveMod  TabLine
+hi default link BufferInactiveSign TabLine
+exe 'hi default BufferInactiveTarget   guifg=red gui=bold guibg=' . bg_inactive
+
+
+" For the shadow in buffer-picking mode
+hi default BufferShadow guifg=#000000 guibg=#000000
+
+" ================ Galaxyline =======================
+
+luafile ~/.config/nvim/galaxyline.lua
+
+" ================ Dashboard ========================
+
+source ~/.config/nvim/dashboard.vim
+
