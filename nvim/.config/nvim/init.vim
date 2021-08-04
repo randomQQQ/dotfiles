@@ -8,6 +8,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'akinsho/nvim-bufferline.lua'
 Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -15,7 +16,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kaicataldo/material.vim', {'branch': 'main'}
-Plug 'romgrk/barbar.nvim'
+" Plug 'romgrk/barbar.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -41,8 +42,11 @@ set termguicolors
 set background=dark
 syntax on                       
 
+hi Error        guibg=#292D3E guifg=#F07178
+hi ErrorMsg     guibg=#292D3E guifg=#F07178
 " ================ General Config ====================
-  
+set autochdir 
+
 set laststatus=2                " status line
 set number                      " always show line numbers
 set encoding=UTF-8
@@ -72,7 +76,8 @@ let g:mapleader=" "
 nmap <leader>w :w!<CR>
 map <F1> :w !python3<CR>
 
-nnoremap <silent> <BS> :nohlsearch<CR>
+noremap <silent><esc> <cmd>noh<cr><esc>
+
 nnoremap 0p "0p
 nnoremap <leader>v <C-v>
 nnoremap <C-u> viwU<Esc>
@@ -87,6 +92,8 @@ noremap <silent> <C-Right> :vertical resize -5<CR>
 
 nnoremap H 0
 nnoremap L $
+
+vnoremap <leader>p "_dP
 
 " ================ coc-vim ==========================
 
@@ -168,47 +175,48 @@ EOF
 
 " ================ Barbar ===========================
 
-nnoremap <silent>    <A-,> :BufferPrevious<CR>
-nnoremap <silent>    <A-.> :BufferNext<CR>
-nnoremap <silent>    <A-c> :BufferClose<CR>
+" nnoremap <silent>    <A-,> :BufferPrevious<CR>
+" nnoremap <silent>    <A-.> :BufferNext<CR>
+" nnoremap <silent>    <A-c> :BufferClose<CR>
 
-let bufferline = get(g:, 'bufferline', {})
-" Enable/disable animations
-let bufferline.animation = v:true
-" Enable/disable current/total tabpages indicator (top right corner)
-let bufferline.tabpages = v:false
+" let bufferline = get(g:, 'bufferline', {})
+" " Enable/disable animations
+" let bufferline.animation = v:true
+" " Enable/disable current/total tabpages indicator (top right corner)
+" let bufferline.tabpages = v:false
 
-let bufferline.icon_close_tab = 'x'
-let bufferline.icon_close_tab_modified = '●'
+" let bufferline.icon_close_tab = 'x'
+" let bufferline.icon_close_tab_modified = '●'
 
-let bg_current = get(nvim_get_hl_by_name('Normal',     1), 'background', '#000000')
-let bg_visible = get(nvim_get_hl_by_name('TabLineSel', 1), 'background', '#000000')
-let bg_inactive = get(nvim_get_hl_by_name('TabLine',   1), 'background', '#000000')
+" let bg_current = get(nvim_get_hl_by_name('Normal',     1), 'background', '#000000')
+" let bg_current = get(nvim_get_hl_by_name('Normal',     1), 'background', '#000000')
+" let bg_visible = get(nvim_get_hl_by_name('TabLineSel', 1), 'background', '#000000')
+" let bg_inactive = get(nvim_get_hl_by_name('TabLine',   1), 'background', '#000000')
 
-" For the current active buffer
-hi default link BufferCurrent      Normal
-" For the current active buffer when modified
-hi default link BufferCurrentMod   Normal
-" For the current active buffer icon
-hi default link BufferCurrentSign  Normal
-" For the current active buffer target when buffer-picking
-exe 'hi default BufferCurrentTarget   guifg=red gui=bold guibg=' . bg_current
+" " For the current active buffer
+" hi default link BufferCurrent      Normal
+" " For the current active buffer when modified
+" hi default link BufferCurrentMod   Normal
+" " For the current active buffer icon
+" hi default link BufferCurrentSign  Normal
+" " For the current active buffer target when buffer-picking
+" exe 'hi default BufferCurrentTarget   guifg=red gui=bold guibg=' . bg_current
 
-" For buffers visible but not the current one
-hi default link BufferVisible      TabLineSel
-hi default link BufferVisibleMod   TabLineSel
-hi default link BufferVisibleSign  TabLineSel
-exe 'hi default BufferVisibleTarget   guifg=red gui=bold guibg=' . bg_visible
+" " For buffers visible but not the current one
+" hi default link BufferVisible      TabLineSel
+" hi default link BufferVisibleMod   TabLineSel
+" hi default link BufferVisibleSign  TabLineSel
+" exe 'hi default BufferVisibleTarget   guifg=red gui=bold guibg=' . bg_visible
 
-" For buffers invisible buffers
-hi default link BufferInactive     TabLine
-hi default link BufferInactiveMod  TabLine
-hi default link BufferInactiveSign TabLine
-exe 'hi default BufferInactiveTarget   guifg=red gui=bold guibg=' . bg_inactive
+" " For buffers invisible buffers
+" hi default link BufferInactive     TabLine
+" hi default link BufferInactiveMod  TabLine
+" hi default link BufferInactiveSign TabLine
+" exe 'hi default BufferInactiveTarget   guifg=red gui=bold guibg=' . bg_inactive
 
-
-" For the shadow in buffer-picking mode
-hi default BufferShadow guifg=#000000 guibg=#000000
+" hi TabLineFill ctermfg=red ctermbg=DarkGreen
+" hi TabLine ctermfg=Blue ctermbg=Yellow
+" hi BufferTabpageFill ctermfg=Red ctermbg=Yellow
 
 " ================ Galaxyline =======================
 
@@ -217,4 +225,23 @@ luafile ~/.config/nvim/galaxyline.lua
 " ================ Dashboard ========================
 
 source ~/.config/nvim/dashboard.vim
+
+
+lua << EOF
+require("bufferline").setup{
+    options = {
+    show_buffer_close_icons = true,
+    show_close_icon = false,
+    diagnostics = 'nvim_lsp',
+    diagnostics_indicator = function()
+      return '•'
+    end,
+  }
+}
+EOF
+
+
+nnoremap <silent>    <A-,> :BufferLineCyclePrev<CR>
+nnoremap <silent>    <A-.> :BufferLineCycleNext<CR>
+nnoremap <silent>    <A-c> :bd!<CR>
 

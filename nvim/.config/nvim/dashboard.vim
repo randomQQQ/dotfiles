@@ -9,10 +9,11 @@ nnoremap <silent> <Leader>fm :DashboardJumpMark<CR>
 nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
 
 let g:dashboard_custom_section={
-  \ 'a': {'description': ['  Find File            '], 'command': 'Telescope find_files' },
-  \ 'b': {'description': ['  Find Word            '], 'command': 'Telescope find_files find_command=rg,--hidden,--files' },
-  \ 'c': {'description': ['  Marks                '], 'command': 'Telescope marks'},
-  \ 'd': {'description': ['  Settings             '], 'command': ':e ~/.config/nvim/init.vim'}
+  \ 'a': {'description': ['            New File             '], 'command': ':DashboardNewFile'},
+  \ 'b': {'description': ['            Find File            '], 'command': 'Telescope find_files' },
+  \ 'c': {'description': ['            Find Word            '], 'command': 'Telescope live_grep' },
+  \ 'd': {'description': ['            Marks                '], 'command': 'Telescope marks'},
+  \ 'e': {'description': ['            Settings             '], 'command': ':e ~/.config/nvim/init.vim'},
   \ }
 
 let g:dashboard_custom_footer = [
@@ -55,3 +56,5 @@ let g:dashboard_custom_header = [
 \ '                                                       ',
 \]
 
+autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
+highlight dashboardHeader ctermfg=114
