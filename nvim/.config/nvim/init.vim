@@ -8,6 +8,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'tpope/vim-fugitive'
 Plug 'akinsho/nvim-bufferline.lua'
 Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/popup.nvim'
@@ -16,7 +17,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kaicataldo/material.vim', {'branch': 'main'}
-" Plug 'romgrk/barbar.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -30,6 +30,7 @@ Plug 'rakr/vim-one'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'mattn/webapi-vim'
+Plug 'karb94/neoscroll.nvim'
 
 call plug#end()
 
@@ -63,6 +64,7 @@ set smarttab                    " insert tabs on the start of a line
 set tabstop=4                   " tab width is 4 spaces
 set softtabstop=4               " when hitting <BS>, pretend like a tab is removed, even if spaces
 set shiftwidth=4                " indent with 4 spaces
+set smartindent                 " Makes indenting smart
 
 " ================ Turn Off Swap Files ==============
 
@@ -92,8 +94,14 @@ noremap <silent> <C-Right> :vertical resize -5<CR>
 
 nnoremap H 0
 nnoremap L $
+noremap J <C-d>
+noremap K <C-u> 
 
 vnoremap <leader>p "_dP
+
+nnoremap <silent>    <A-,> :BufferLineCyclePrev<CR>
+nnoremap <silent>    <A-.> :BufferLineCycleNext<CR>
+nnoremap <silent>    <A-c> :bd!<CR>
 
 " ================ coc-vim ==========================
 
@@ -133,7 +141,7 @@ require('telescope').setup({
       '--line-number',
       '--column',
       '--smart-case',
-      '--fixed-strings'
+      '--fixed-strings',
     },
     sorting_strategy = "ascending",
     layout_strategy = "flex",
@@ -165,58 +173,13 @@ require'colorizer'.setup(
       RGB      = true;         -- #RGB hex codes
 	  RRGGBB   = true;         -- #RRGGBB hex codes
 	  RRGGBBAA = true;         -- #RRGGBBAA hex codes
-      names    = true;         -- "Name" codes like Blue
+      names    = true;         
 	  rgb_fn   = true;         -- CSS rgb() and rgba() functions
 	  hsl_fn   = true;         -- CSS hsl() and hsla() functions
 	  css      = true;         -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
 	  css_fn   = true;         -- Enable all CSS *functions*: rgb_fn, hsl_fn
   })
 EOF
-
-" ================ Barbar ===========================
-
-" nnoremap <silent>    <A-,> :BufferPrevious<CR>
-" nnoremap <silent>    <A-.> :BufferNext<CR>
-" nnoremap <silent>    <A-c> :BufferClose<CR>
-
-" let bufferline = get(g:, 'bufferline', {})
-" " Enable/disable animations
-" let bufferline.animation = v:true
-" " Enable/disable current/total tabpages indicator (top right corner)
-" let bufferline.tabpages = v:false
-
-" let bufferline.icon_close_tab = 'x'
-" let bufferline.icon_close_tab_modified = '●'
-
-" let bg_current = get(nvim_get_hl_by_name('Normal',     1), 'background', '#000000')
-" let bg_current = get(nvim_get_hl_by_name('Normal',     1), 'background', '#000000')
-" let bg_visible = get(nvim_get_hl_by_name('TabLineSel', 1), 'background', '#000000')
-" let bg_inactive = get(nvim_get_hl_by_name('TabLine',   1), 'background', '#000000')
-
-" " For the current active buffer
-" hi default link BufferCurrent      Normal
-" " For the current active buffer when modified
-" hi default link BufferCurrentMod   Normal
-" " For the current active buffer icon
-" hi default link BufferCurrentSign  Normal
-" " For the current active buffer target when buffer-picking
-" exe 'hi default BufferCurrentTarget   guifg=red gui=bold guibg=' . bg_current
-
-" " For buffers visible but not the current one
-" hi default link BufferVisible      TabLineSel
-" hi default link BufferVisibleMod   TabLineSel
-" hi default link BufferVisibleSign  TabLineSel
-" exe 'hi default BufferVisibleTarget   guifg=red gui=bold guibg=' . bg_visible
-
-" " For buffers invisible buffers
-" hi default link BufferInactive     TabLine
-" hi default link BufferInactiveMod  TabLine
-" hi default link BufferInactiveSign TabLine
-" exe 'hi default BufferInactiveTarget   guifg=red gui=bold guibg=' . bg_inactive
-
-" hi TabLineFill ctermfg=red ctermbg=DarkGreen
-" hi TabLine ctermfg=Blue ctermbg=Yellow
-" hi BufferTabpageFill ctermfg=Red ctermbg=Yellow
 
 " ================ Galaxyline =======================
 
@@ -225,7 +188,6 @@ luafile ~/.config/nvim/galaxyline.lua
 " ================ Dashboard ========================
 
 source ~/.config/nvim/dashboard.vim
-
 
 lua << EOF
 require("bufferline").setup{
@@ -239,9 +201,4 @@ require("bufferline").setup{
   }
 }
 EOF
-
-
-nnoremap <silent>    <A-,> :BufferLineCyclePrev<CR>
-nnoremap <silent>    <A-.> :BufferLineCycleNext<CR>
-nnoremap <silent>    <A-c> :bd!<CR>
 
