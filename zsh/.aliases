@@ -5,5 +5,4 @@ alias uu='sudo apt update && sudo apt -y upgrade'
 alias path='echo $PATH'
 alias python=python3
 alias vim=nvim
-alias code=code-insiders
 alias df='df -h'

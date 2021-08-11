@@ -23,7 +23,7 @@ assign [class="Chromium"] $ws2
 # ПРИВЯЗКА К ВОРКСПЕЙСАМ
 assign [class="Chromium"] $ws2
 assign [class="TelegramDesktop"] $ws2
-assign [class="Code - Insiders"] $ws3
+assign [class="Code"] $ws3
 assign [class="hyper"] $ws1
 assign [class="deluge"] $ws9
 assign [class="slack"] $ws9
