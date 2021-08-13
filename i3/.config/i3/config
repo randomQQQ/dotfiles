@@ -117,7 +117,7 @@ default_border pixel
 
 # РАЗМЕР РАМОК ОКНА
 #for_window [tiling] border pixel 2
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 
 # ОТКЛЮЧЕНИЕ РАМОК ДЛЯ ПОЛНОЭКРАННЫХ ПРИЛОЖЕНИЙ
 smart_borders on

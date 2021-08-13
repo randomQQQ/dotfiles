@@ -103,6 +103,16 @@ nnoremap <silent>    <A-,> :BufferLineCyclePrev<CR>
 nnoremap <silent>    <A-.> :BufferLineCycleNext<CR>
 nnoremap <silent>    <A-c> :bd!<CR>
 
+" undo break points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap ( (<c-g>u
+inoremap ) )<c-g>u
+inoremap [ [<c-g>u
+inoremap ] ]<c-g>u
+
 " ================ coc-vim ==========================
 
 source $HOME/.config/nvim/coc.vim
