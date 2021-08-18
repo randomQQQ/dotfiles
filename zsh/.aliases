@@ -6,3 +6,4 @@ alias path='echo $PATH'
 alias python=python3
 alias vim=nvim
 alias df='df -h'
+alias tor=torbrowser-launcher

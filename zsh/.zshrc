@@ -77,7 +77,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump )
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump zsh-vi-mode )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -164,6 +164,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+function zvm_after_init() {
+  zvm_bindkey viins '^j' end-of-line
+  zvm_bindkey viins '^H' backward-kill-word
+}
 
 bindkey '^H' backward-kill-word
 bindkey "^j" end-of-line

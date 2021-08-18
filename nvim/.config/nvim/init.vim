@@ -5,7 +5,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
 endif
-
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-fugitive'
@@ -31,6 +30,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'mattn/webapi-vim'
 Plug 'karb94/neoscroll.nvim'
+Plug 'numToStr/FTerm.nvim'
 
 call plug#end()
 
@@ -74,6 +74,13 @@ set nowb
 
 " ================ Mapping ==========================
 
+nnoremap <tab> %
+vnoremap <tab> %
+nnoremap x "_x
+
+noremap <silent> k gk
+noremap <silent> j gj
+
 let g:mapleader=" "  
 nmap <leader>w :w!<CR>
 map <F1> :w !python3<CR>
@@ -92,10 +99,17 @@ nnoremap <C-H> <C-W>h
 noremap <silent> <C-Left> :vertical resize +5<CR>
 noremap <silent> <C-Right> :vertical resize -5<CR>
 
+nnoremap Y y$
 nnoremap H 0
 nnoremap L $
+vnoremap H 0
+vnoremap L $
+
 noremap J <C-d>
 noremap K <C-u> 
+
+nnoremap <leader><leader>p o<ESC>p
+nnoremap <leader><leader>P O<ESC>p
 
 vnoremap <leader>p "_dP
 
@@ -121,6 +135,8 @@ source $HOME/.config/nvim/coc.vim
 
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']
+let g:XkbSwitchSkipIMappings =
+        \ {'*'   : ['.', '>', ':', ';', ',', '{<CR>', '/*', '/*<CR>', '[', ']'],}
 
 " ================ nvim-treesitter ==================
 
@@ -212,7 +228,25 @@ require("bufferline").setup{
 }
 EOF
 
+" source ~/.config/nvim/floaterm.vim
 
+" ================ Fterm ============================
 
+lua << EOF 
+require'FTerm'.setup({
+    dimensions  = {
+        height = 0.8,
+        width = 0.8,
+        x = 0.5,
+        y = 0.5
+    },
+    border = 'single' -- or 'double'
+})
 
+-- Keybinding
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
 
+map('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>', opts)
+map('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
+EOF 
