@@ -5,6 +5,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
 endif
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-fugitive'
@@ -46,7 +47,7 @@ syntax on
 hi Error        guibg=#292D3E guifg=#F07178
 hi ErrorMsg     guibg=#292D3E guifg=#F07178
 " ================ General Config ====================
-set autochdir 
+" set autochdir 
 
 set laststatus=2                " status line
 set number                      " always show line numbers
@@ -126,6 +127,9 @@ inoremap ( (<c-g>u
 inoremap ) )<c-g>u
 inoremap [ [<c-g>u
 inoremap ] ]<c-g>u
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 " ================ coc-vim ==========================
 
@@ -250,3 +254,8 @@ local opts = { noremap = true, silent = true }
 map('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>', opts)
 map('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
 EOF 
+
+
+
+
+
