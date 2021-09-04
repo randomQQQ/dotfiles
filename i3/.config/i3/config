@@ -12,10 +12,7 @@ exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
 exec kitty 
 exec kitty
 exec telegram-desktop
-exec chromium
-
-# ПРИЛОЖЕНИЯ В ФОКУСЕ
-assign [class="Chromium"] $ws2
+exec chromium 
 
 # Переместить окно
 #floating_modifier $mod
@@ -26,7 +23,7 @@ assign [class="TelegramDesktop"] $ws2
 assign [class="Code"] $ws3
 assign [class="hyper"] $ws1
 assign [class="deluge"] $ws9
-assign [class="slack"] $ws9
+assign [class="Slack"] $ws9
 assign [class="discord"] $ws9
 assign [class="zoom"] $ws9
 

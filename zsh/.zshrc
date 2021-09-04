@@ -171,3 +171,8 @@ function zvm_after_init() {
 
 bindkey '^H' backward-kill-word
 bindkey "^j" end-of-line
+
+
+mkd() {
+    mkdir -p "$@" && cd "$@"
+}

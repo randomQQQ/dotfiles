@@ -256,6 +256,6 @@ map('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
 EOF 
 
 
+" ================ Repeat ============================
 
-
-
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
