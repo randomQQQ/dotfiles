@@ -11,6 +11,7 @@ export ZSH="/home/rnd/.oh-my-zsh"
 export VISUAL=nvim;
 export EDITOR=nvim;
 
+setopt hist_ignore_all_dups
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -172,7 +173,8 @@ function zvm_after_init() {
 bindkey '^H' backward-kill-word
 bindkey "^j" end-of-line
 
-
-mkd() {
-    mkdir -p "$@" && cd "$@"
+# fh - repeat history
+h() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac --height "50%" | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
+
