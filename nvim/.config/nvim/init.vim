@@ -192,6 +192,7 @@ require('telescope').setup({
     },
   }
 })
+
 EOF
 
 " ================ Colorizer ========================
