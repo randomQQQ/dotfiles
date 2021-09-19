@@ -1,0 +1,5 @@
+[user]
+	email = random.openu@gamil.com
+	name = rndxx
+[core]
+	excludesFile = ~/.gitignore
