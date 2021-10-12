@@ -1,5 +1,6 @@
 "================ Plugins ===========================
 
+
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -30,7 +31,6 @@ Plug 'rakr/vim-one'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'mattn/webapi-vim'
-Plug 'karb94/neoscroll.nvim'
 Plug 'numToStr/FTerm.nvim'
 
 call plug#end()
@@ -260,3 +260,7 @@ EOF
 " ================ Repeat ============================
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
+
+
+nmap <Esc> <Cmd>call VSCodeNotify('notebook.cell.quitEdit')<CR>
+
