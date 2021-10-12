@@ -78,7 +78,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump zsh-vi-mode )
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -178,3 +178,9 @@ h() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac --height "50%" | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
 
+
+export PYENV_ROOT="$HOME/.pyenv" 
+export PATH="$PYENV_ROOT/bin:$PATH" 
+eval "$(pyenv init --path)" 
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
