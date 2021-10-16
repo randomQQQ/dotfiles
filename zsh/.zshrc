@@ -1,7 +1,3 @@
-# add aliases file
-if [ -f ~/.aliases  ]; then
-    . ~/.aliases
-fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -184,3 +180,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)" 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+
+# add aliases file
+if [ -f ~/.aliases  ]; then
+    . ~/.aliases
+fi

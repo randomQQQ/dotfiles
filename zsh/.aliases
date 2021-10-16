@@ -9,3 +9,4 @@ alias tor=torbrowser-launcher
 alias ff=ffsend
 alias ssh='kitty +kitten ssh'
 alias python=python3
+alias ls='ls --color -h --group-directories-first'
