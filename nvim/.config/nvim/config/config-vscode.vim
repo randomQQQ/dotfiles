@@ -2,8 +2,6 @@
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'lyokha/vim-xkbswitch'
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
 call plug#end()
@@ -77,3 +75,8 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 nmap <Esc> <Cmd>call VSCodeNotify('notebook.cell.quitEdit')<CR>
+
+xmap gc  <Plug>VSCodeCommentary
+nmap gc  <Plug>VSCodeCommentary
+omap gc  <Plug>VSCodeCommentary
+nmap gcc <Plug>VSCodeCommentaryLine

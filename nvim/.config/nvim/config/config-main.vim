@@ -263,5 +263,3 @@ silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 " ================ Vscode ============================
 
-nmap <Esc> <Cmd>call VSCodeNotify('notebook.cell.quitEdit')<CR>
-
