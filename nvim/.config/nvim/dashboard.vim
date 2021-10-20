@@ -13,7 +13,7 @@ let g:dashboard_custom_section={
   \ 'b': {'description': ['            Find File            '], 'command': 'Telescope find_files' },
   \ 'c': {'description': ['            Find Word            '], 'command': 'Telescope live_grep' },
   \ 'd': {'description': ['            Marks                '], 'command': 'Telescope marks'},
-  \ 'e': {'description': ['            Settings             '], 'command': ':e ~/.config/nvim/init.vim'},
+  \ 'e': {'description': ['            Settings             '], 'command': ':e ~/.config/nvim/config/config-main.vim'},
   \ }
 
 let g:dashboard_custom_footer = [
