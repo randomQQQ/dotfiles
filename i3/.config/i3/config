@@ -100,8 +100,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # ГАПСЫ
-gaps inner 15
-gaps outer 8
+gaps inner 6
+gaps outer 6
 
 smart_gaps on
 

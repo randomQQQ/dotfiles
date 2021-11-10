@@ -6,6 +6,7 @@ export ZSH="/home/rnd/.oh-my-zsh"
 
 export VISUAL=nvim;
 export EDITOR=nvim;
+export PSQL_EDITOR=/usr/local/bin/nvim
 
 setopt hist_ignore_all_dups
 # Set name of the theme to load --- if set to "random", it will
