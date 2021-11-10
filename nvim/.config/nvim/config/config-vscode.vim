@@ -9,7 +9,6 @@ call plug#end()
 " ================ General Config ====================
 
 set laststatus=2                " status line
-set number                      " always show line numbers
 set encoding=UTF-8
 set ignorecase                  " ignore case when searching
 set noshowmode                  " hide the default mode text
@@ -32,16 +31,16 @@ set nowb
 
 " ================ Mapping ==========================
 
+nnoremap <C-L> :noh<CR><C-L>
 nnoremap <tab> %
 vnoremap <tab> %
 nnoremap x "_x
+nnoremap s "_s
 
 noremap <silent> k gk
 noremap <silent> j gj
 
 let g:mapleader=" "  
-
-noremap <silent><esc> <cmd>noh<cr><esc>
 
 nnoremap 0p "0p
 nnoremap <leader>v <C-v>
@@ -60,16 +59,6 @@ nnoremap <leader><leader>p o<ESC>p
 nnoremap <leader><leader>P O<ESC>p
 
 vnoremap <leader>p "_dP
-
-" undo break points
-inoremap , ,<c-g>u
-inoremap . .<c-g>u
-inoremap ! !<c-g>u
-inoremap ? ?<c-g>u
-inoremap ( (<c-g>u
-inoremap ) )<c-g>u
-inoremap [ [<c-g>u
-inoremap ] ]<c-g>u
 
 nnoremap n nzzzv
 nnoremap N Nzzzv

@@ -14,7 +14,6 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kaicataldo/material.vim', {'branch': 'main'}
 Plug 'ryanoasis/vim-devicons'
@@ -35,7 +34,6 @@ Plug 'numToStr/FTerm.nvim'
 call plug#end()
 
 " ================ Color theme =======================
-
 let g:material_theme_style = 'palenight'
 colorscheme material
 " colorscheme one
@@ -78,6 +76,7 @@ set nowb
 nnoremap <tab> %
 vnoremap <tab> %
 nnoremap x "_x
+nnoremap s "_s
 
 noremap <silent> k gk
 noremap <silent> j gj
@@ -127,6 +126,7 @@ inoremap ( (<c-g>u
 inoremap ) )<c-g>u
 inoremap [ [<c-g>u
 inoremap ] ]<c-g>u
+nnoremap <C-n> :NvimTreeToggle<CR>
 
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -141,18 +141,6 @@ let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']
 let g:XkbSwitchSkipIMappings =
         \ {'*'   : ['.', '>', ':', ';', ',', '{<CR>', '/*', '/*<CR>', '[', ']'],}
-
-" ================ nvim-treesitter ==================
-
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true
-  },
-}
-EOF
-
-nnoremap <C-n> :NvimTreeToggle<CR>
 
 " ================ Telescope ========================
 
@@ -260,6 +248,4 @@ EOF
 " ================ Repeat ============================
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
-
-" ================ Vscode ============================
 
