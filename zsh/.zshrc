@@ -74,8 +74,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Key-bindings
-bindkey '^H' backward-kill-word
-bindkey "^j" end-of-line
+function zvm_after_init() {
+  zvm_bindkey viins '^j' end-of-line
+  zvm_bindkey viins '^H' backward-kill-word
+}
 
 # fh - repeat history
 h() {
