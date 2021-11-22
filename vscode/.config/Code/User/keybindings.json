@@ -492,5 +492,9 @@
     "key": "up",
     "command": "-workbench.banner.focusPreviousAction",
     "when": "bannerFocused"
+  },
+  {
+    "key": "f2",
+    "command": "docsView.documentation.focus"
   }
 ]

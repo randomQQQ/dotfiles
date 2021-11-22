@@ -26,6 +26,7 @@ assign [class="deluge"] $ws9
 assign [class="Slack"] $ws9
 assign [class="discord"] $ws9
 assign [class="zoom"] $ws9
+assign [class="Evince"] $ws8
 
 # Нет фокуса при наведении мыши 
 focus_follows_mouse no

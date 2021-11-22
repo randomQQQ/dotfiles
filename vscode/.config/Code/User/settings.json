@@ -25,7 +25,6 @@
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.folding": false,
-  "workbench.iconTheme": "vscode-icons",
   "explorer.confirmDelete": false,
   "editor.formatOnPaste": true,
   "[jsonc]": {
@@ -55,7 +54,6 @@
     "default": "hidden"
   },
   "notebook.navigation.allowNavigateToSurroundingCells": false,
-  "liveshare.presence": false,
   "python.pythonPath": "/usr/bin/python3",
   "breadcrumbs.enabled": false,
   "files.exclude": {
@@ -65,8 +63,10 @@
   },
   "notebook.consolidatedRunButton": true,
   "editor.suggestOnTriggerCharacters": false,
-  "liveshare.showVerboseNotifications": false,
   "extensions.ignoreRecommendations": true,
   "editor.semanticHighlighting.enabled": false,
-  "vsintellicode.typescript.completionsEnabled": false
+  "vsintellicode.typescript.completionsEnabled": false,
+  "jupyter.sendSelectionToInteractiveWindow": true,
+  "workbench.iconTheme": "vscode-icons",
+  "notebook.diff.ignoreOutputs": true
 }

@@ -221,8 +221,6 @@ require("bufferline").setup{
 }
 EOF
 
-" source ~/.config/nvim/floaterm.vim
-
 " ================ Fterm ============================
 
 lua << EOF 

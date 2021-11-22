@@ -6,7 +6,7 @@
     "python.linting.enabled": true,
     "suggest.removeDuplicateItems": true,
     "suggest.floatEnable": false,
-    "python.linting.pylintEnabled": true,
+    "python.linting.pylintEnabled": false,
     "suggest.enablePreview": false,
     "suggest.maxCompleteItemCount": 10,
     "suggest.completionItemKindLabels": {
