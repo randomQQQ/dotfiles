@@ -28,7 +28,7 @@
   "explorer.confirmDelete": false,
   "editor.formatOnPaste": true,
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "terminal.external.linuxExec": "/usr/bin/kitty",
   "terminal.integrated.defaultProfile.linux": "zsh",
@@ -39,7 +39,7 @@
   "editor.lightbulb.enabled": false,
   "git.autofetch": true,
   "notebook.output.textLineLimit": 50,
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
   "workbench.list.automaticKeyboardNavigation": false,
   "editor.guides.highlightActiveIndentation": false,
   "window.zoomLevel": 0.6,
@@ -68,5 +68,74 @@
   "vsintellicode.typescript.completionsEnabled": false,
   "jupyter.sendSelectionToInteractiveWindow": true,
   "workbench.iconTheme": "vscode-icons",
-  "notebook.diff.ignoreOutputs": true
+  "notebook.diff.ignoreOutputs": true,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindings": [
+        {
+            "before": ["<Tab>"],
+            "after": ["%"]
+        },
+        {
+            "before": ["<Leader>", "v"],
+            "after": ["<C-v>"]
+        },
+        {
+            "before": ["H"],
+            "after": ["0"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": ["J"],
+            "after": ["<C-d>"]
+        },
+        {
+            "before": ["K"],
+            "after": ["<C-u>"]
+        },
+        {
+            "before": ["<Leader>", "<Leader>", "p"],
+            "after": ["o", "<Esc>", "p"]
+        },
+    ],
+  "vim.visualModeKeyBindings": [
+        {
+            "before": ["<Tab>"],
+            "after": ["%"]
+        },
+        {
+            "before": ["H"],
+            "after": ["0"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": ["<Leader>", "p"],
+            "after": ["\"", "_", "d", "P"]
+        },
+    ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["x"],
+            "after": ["\"", "_", "x"]
+        },
+        {
+            "before": ["s"],
+            "after": ["\"", "_", "s"]
+        },
+        {
+            "before": ["u"],
+            "commands": ["undo"]
+        },
+        {
+            "before": ["<C-r>"],
+            "commands": ["redo"]
+        },
+    ],
 }
+
