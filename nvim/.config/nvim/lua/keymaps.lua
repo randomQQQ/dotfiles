@@ -47,7 +47,7 @@ map('n', '<A-.>', ':BufferLineCycleNext<cr>', default_opts)
 map('n', '<A-c>', ':bd!<CR>', default_opts)
 
 map('n', '<C-n>', ':RnvimrToggle<cr>', noremap)
-map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', noremap)
+map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,-L,--files<cr>', noremap)
 map('n', '<leader>fa', '<cmd>Telescope live-grep<cr>', noremap)
 map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
 

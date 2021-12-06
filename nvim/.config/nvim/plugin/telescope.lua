@@ -1,6 +1,14 @@
 local actions = require('telescope.actions')
 
 require('telescope').setup {
+  extensions = {
+    fzf = {
+        fuzzy = true,                    -- false will only do exact matching
+        override_generic_sorter = true,  -- override the generic sorter
+        override_file_sorter = true,     -- override the file sorter
+        case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+    }
+  },
   defaults = {
     layout_config = {
         width = 0.75,
@@ -20,7 +28,18 @@ require('telescope').setup {
         horizontal = {mirror = false},
         vertical = {mirror = false}
     },
-    find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
+    file_ignore_patterns = { '%.jpg', '%.jpeg', '%.png', '%.otf', '%.ttf' },
+    find_command = {
+        'rg',
+        -- '--no-heading',
+        -- '--with-filename',
+        -- '--line-number', 
+        -- '--column',
+        -- '--smart-case',
+        '--files',
+        '--hidden',
+        '--ignore',
+    },
     prompt_prefix = " ",
     selection_caret = " ",
     entry_prefix = "  ",
@@ -58,3 +77,5 @@ require('telescope').setup {
     }
   }
 }
+require('telescope').load_extension('fzf')
+
