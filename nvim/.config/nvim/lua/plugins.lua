@@ -27,25 +27,25 @@ end
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
-  use 'wbthomason/packer.nvim' -- Have packer manage itself
-  use 'kaicataldo/material.vim'
-  use 'tpope/vim-commentary'
-  use 'tpope/vim-surround'
-  use 'windwp/nvim-autopairs'
-  use 'glepnir/galaxyline.nvim'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'norcalli/nvim-colorizer.lua'
-  use 'kevinhwang91/rnvimr'
-  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}}}
-  use 'akinsho/nvim-bufferline.lua'
-  use 'glepnir/dashboard-nvim'
-  use {'neoclide/coc.nvim', branch = 'release'}
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+    -- My plugins here
+    use 'wbthomason/packer.nvim' -- Have packer manage itself
+    use 'kaicataldo/material.vim'
+    use 'tpope/vim-commentary'
+    use 'tpope/vim-surround'
+    use 'windwp/nvim-autopairs'
+    use 'glepnir/galaxyline.nvim'
+    use 'kyazdani42/nvim-web-devicons'
+    use 'norcalli/nvim-colorizer.lua'
+    use 'kevinhwang91/rnvimr'
+    use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}}}
+    use 'akinsho/nvim-bufferline.lua'
+    use 'glepnir/dashboard-nvim'
+    use {'neoclide/coc.nvim', branch ='release'}
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
+if PACKER_BOOTSTRAP then
     require('packer').sync()
-  end
+end
 end)
 

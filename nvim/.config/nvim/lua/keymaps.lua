@@ -16,18 +16,28 @@ map('v', '<tab>', '%', noremap)
 map('n', 'x', '"_x', noremap)
 map('n', 's', '"_s', noremap)
 
+-- Make word uppercase
+map("n", "<C-u>", "viwU<ESC>", { noremap = true })
+map("i", "<C-u>", "<ESC>viwUea", { noremap = true })
+
+-- Save file
 map('n', '<leader>w', ':w! <cr>', noremap)
+
+-- Run python
 map('n', '<F1>', ':w !python3<cr>', noremap)
+
+-- Remove highlights
 map('n', '<esc>', '<cmd>noh<cr><esc>', noremap)
 
 map('n', '0p', '"0p', noremap)
 map('n', '<leader>v', '<C-v>', noremap)
 map('n', '<C-u>', 'viwU<esc>', noremap)
 
-map('n', '<C-J>', '<C-W>j', noremap)
-map('n', '<C-K>', '<C-W>k', noremap)
-map('n', '<C-L>', '<C-W>l', noremap)
-map('n', '<C-H>', '<C-W>h', noremap)
+-- Better window movement
+map('n', '<C-j>', '<C-W>j', noremap)
+map('n', '<C-k>', '<C-W>k', noremap)
+map('n', '<C-l>', '<C-W>l', noremap)
+map('n', '<C-h>', '<C-W>h', noremap)
 
 map('n', 'Y', 'y$', noremap)
 map('n', 'H', '0', noremap)
@@ -42,12 +52,18 @@ map('n', '<leader><leader>p', 'o<esc>p', noremap)
 map('n', '<leader><leader>P', 'O<esc>p', noremap)
 map('v', '<leader>p', '"_dP', noremap)
 
-map('n', '<A-,>', ':BufferLineCyclePrev<cr>', default_opts)
-map('n', '<A-.>', ':BufferLineCycleNext<cr>', default_opts)
-map('n', '<A-c>', ':bd!<CR>', default_opts)
+-- Buffers
+map('n', '<A-,>', '<cmd>BufferLineCyclePrev<cr>', default_opts)
+map('n', '<A-.>', '<cmd>BufferLineCycleNext<cr>', default_opts)
+map('n', '<A-c>', '<cmd>bd!<CR>', default_opts)
 
-map('n', '<C-n>', ':RnvimrToggle<cr>', noremap)
+-- Rnvimr
+map('n', '<C-n>', '<cmd>RnvimrToggle<cr>', noremap)
+
+--Telescope
 map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,-L,--files<cr>', noremap)
-map('n', '<leader>fa', '<cmd>Telescope live-grep<cr>', noremap)
+map('n', '<leader>fn', '<cmd>Telescope find_files cwd=~/.config/nvim find_command=rg,--ignore,-L,--files<cr>', noremap)
+map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
+map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', noremap)
 map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
 
