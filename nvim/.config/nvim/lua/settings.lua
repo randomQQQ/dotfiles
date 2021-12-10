@@ -34,3 +34,6 @@ opt.termguicolors = true      -- enable 24-bit RGB colors
 cmd 'colorscheme material'
 g['material_theme_style'] = 'palenight'
 opt.background = 'dark'
+cmd ':hi CmpItemAbbrMatch guibg=#82AAff gui=NONE'
+cmd ':hi Error        guibg=#292D3E guifg=#F07178'
+cmd ':hi ErrorMsg     guibg=#292D3E guifg=#F07178'

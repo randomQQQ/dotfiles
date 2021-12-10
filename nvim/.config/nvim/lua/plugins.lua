@@ -40,8 +40,18 @@ return packer.startup(function(use)
     use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}}}
     use 'akinsho/nvim-bufferline.lua'
     use 'glepnir/dashboard-nvim'
-    use {'neoclide/coc.nvim', branch ='release'}
+    -- use {'neoclide/coc.nvim', branch ='release'}
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+
+
+
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'onsails/lspkind-nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
 if PACKER_BOOTSTRAP then

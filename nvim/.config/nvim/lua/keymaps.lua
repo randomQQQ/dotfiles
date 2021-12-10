@@ -26,6 +26,10 @@ map('n', '<leader>w', ':w! <cr>', noremap)
 -- Run python
 map('n', '<F1>', ':w !python3<cr>', noremap)
 
+-- Reselect visual block after indent/outdent
+map('v', '<', '<gv', default_opts)
+map('v', '>', '>gv', default_opts)
+
 -- Remove highlights
 map('n', '<esc>', '<cmd>noh<cr><esc>', noremap)
 
