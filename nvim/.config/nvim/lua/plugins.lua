@@ -36,14 +36,16 @@ return packer.startup(function(use)
     use 'glepnir/galaxyline.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use 'norcalli/nvim-colorizer.lua'
-    use 'kevinhwang91/rnvimr'
-    use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}}}
+    use 'kyazdani42/nvim-tree.lua'
+    -- use 'kevinhwang91/rnvimr'
     use 'akinsho/nvim-bufferline.lua'
-    use 'glepnir/dashboard-nvim'
-    -- use {'neoclide/coc.nvim', branch ='release'}
+    use "folke/which-key.nvim"
+
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-lua/popup.nvim'
+    use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
-
-
+    use 'goolord/alpha-nvim'
 
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'

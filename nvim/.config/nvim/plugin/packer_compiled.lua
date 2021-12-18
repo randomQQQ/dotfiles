@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["alpha-nvim"] = {
+    loaded = true,
+    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -88,11 +93,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
-  },
-  ["dashboard-nvim"] = {
-    loaded = true,
-    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
-    url = "https://github.com/glepnir/dashboard-nvim"
   },
   ["galaxyline.nvim"] = {
     loaded = true,
@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -154,11 +159,6 @@ _G.packer_plugins = {
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
-  rnvimr = {
-    loaded = true,
-    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/rnvimr",
-    url = "https://github.com/kevinhwang91/rnvimr"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -178,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

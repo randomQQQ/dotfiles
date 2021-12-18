@@ -62,7 +62,7 @@ map('n', '<A-.>', '<cmd>BufferLineCycleNext<cr>', default_opts)
 map('n', '<A-c>', '<cmd>bd!<CR>', default_opts)
 
 -- Rnvimr
-map('n', '<C-n>', '<cmd>RnvimrToggle<cr>', noremap)
+map('n', '<C-n>', '<cmd>NvimTreeToggle<cr>', noremap)
 
 --Telescope
 map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,-L,--files<cr>', noremap)

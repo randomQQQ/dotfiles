@@ -137,5 +137,6 @@
             "commands": ["redo"]
         },
     ],
+    "editor.unicodeHighlight.ambiguousCharacters": false,
 }
 
