@@ -71,3 +71,4 @@ map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
 map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', noremap)
 map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
 
+-- map('n', '<leader>fa', '<cmd>Telescope find_files search_dirs=["~/Downloads","~/.config/nvim"] <CR>', noremap)

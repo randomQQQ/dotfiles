@@ -39,7 +39,8 @@ return packer.startup(function(use)
     use 'kyazdani42/nvim-tree.lua'
     -- use 'kevinhwang91/rnvimr'
     use 'akinsho/nvim-bufferline.lua'
-    use "folke/which-key.nvim"
+    use 'folke/which-key.nvim'
+    use 'ahmedkhalf/project.nvim'
 
     use 'nvim-lua/plenary.nvim'
     use 'nvim-lua/popup.nvim'
