@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/material.vim",
     url = "https://github.com/kaicataldo/material.vim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
