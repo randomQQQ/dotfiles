@@ -77,6 +77,10 @@
             "after": ["%"]
         },
         {
+            "before": ["leader", "w"],
+            "commands": ["workbench.action.files.save"]            ]
+        },
+        {
             "before": ["<Leader>", "v"],
             "after": ["<C-v>"]
         },
@@ -100,6 +104,10 @@
             "before": ["<Leader>", "<Leader>", "p"],
             "after": ["o", "<Esc>", "p"]
         },
+        {
+            "before": ["<C-u>"],
+            "after": ["v", "i", "w", "U", "<Esc>"]
+        },
     ],
   "vim.visualModeKeyBindings": [
         {
@@ -117,6 +125,14 @@
         {
             "before": ["<Leader>", "p"],
             "after": ["\"", "_", "d", "P"]
+        },
+        {
+            "before": ["<"],
+            "after": ["<", "g", "v"]
+        },
+        {
+            "before": [">"],
+            "after": [">", "g", "v"]
         },
     ],
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -137,6 +153,13 @@
             "commands": ["redo"]
         },
     ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<C-u>"],
+            "after": ["<Esc>", "v", "i", "w", "U", "e", "a"]
+        },
+    ]
     "editor.unicodeHighlight.ambiguousCharacters": false,
+    "notebook.markup.fontSize": 14,
 }
 
