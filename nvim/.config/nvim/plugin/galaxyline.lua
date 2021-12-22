@@ -8,7 +8,7 @@ local right_short = gl.section.short_line_right
 
 
 -- disable for these file types
-gl.short_line_list = { 'startify', 'nerdtree', 'term', 'fugitive', 'NvimTree' }
+gl.short_line_list = { 'NvimTree', 'alpha' }
 
 left[1] = {
   Separator = {

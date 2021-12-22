@@ -17,8 +17,8 @@ map('n', 'x', '"_x', noremap)
 map('n', 's', '"_s', noremap)
 
 -- Make word uppercase
-map("n", "<C-u>", "viwU<ESC>", { noremap = true })
-map("i", "<C-u>", "<ESC>viwUea", { noremap = true })
+map("n", "<C-u>", "viwU<ESC>", noremap)
+map("i", "<C-u>", "<ESC>viwUea", noremap)
 
 -- Save file
 map('n', '<leader>w', ':w! <cr>', noremap)
@@ -35,7 +35,6 @@ map('n', '<esc>', '<cmd>noh<cr><esc>', noremap)
 
 map('n', '0p', '"0p', noremap)
 map('n', '<leader>v', '<C-v>', noremap)
-map('n', '<C-u>', 'viwU<esc>', noremap)
 
 -- Better window movement
 map('n', '<C-j>', '<C-W>j', noremap)
