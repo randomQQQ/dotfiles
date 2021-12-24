@@ -92,7 +92,7 @@ local mappings = {
 
   f = {
     name = "Find",
-    f = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Find files" },
+    f = { "<cmd>Telescope find_files find_command=rg,--ignore,-L,--files<cr>", "Find files" },
     g = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     n = { "<cmd>Telescope find_files cwd=~/.config/nvim find_command=rg,--ignore,-L,--files<cr>", "Find nvim" },
     p = { "<cmd>Telescope projects<cr>", "Find Text" },
