@@ -24,7 +24,7 @@ map("i", "<C-u>", "<ESC>viwUea", noremap)
 map('n', '<leader>w', ':w! <cr>', noremap)
 
 -- Run python
-map('n', '<F1>', ':w !python3<cr>', noremap)
+map('n', '<F2>', ':w !python3<cr>', noremap)
 
 -- Reselect visual block after indent/outdent
 map('v', '<', '<gv', default_opts)
@@ -70,4 +70,7 @@ map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
 map('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', noremap)
 map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
 
--- map('n', '<leader>fa', '<cmd>Telescope find_files search_dirs=["~/Downloads","~/.config/nvim"] <CR>', noremap)
+map('i', '<F1>', '<Nop>', noremap)
+map('n', '<F1>', '<Nop>', noremap)
+
+-- map('n', '<leader>fd', '<cmd>Telescope find_files search_dirs=["~/Documents/repositories"] <CR>', noremap)

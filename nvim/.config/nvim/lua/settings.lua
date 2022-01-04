@@ -38,4 +38,3 @@ opt.termguicolors = true      -- enable 24-bit RGB colors
 cmd 'colorscheme material'
 g['material_theme_style'] = 'palenight'
 opt.background = 'dark'
-

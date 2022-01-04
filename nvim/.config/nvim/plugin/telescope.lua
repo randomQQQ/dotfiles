@@ -17,7 +17,9 @@ require('telescope').setup {
         horizontal = {mirror = false},
         vertical = {mirror = false}
     },
-    file_ignore_patterns = { '%.jpg', '%.jpeg', '%.png', '%.otf', '%.ttf', '%.git', '%.pdf', '%.gif' },
+    file_ignore_patterns = { '%.jpg', '%.jpeg', '%.png',
+                             '%.otf', '%.ttf', '%.git',
+                             '%.pdf', '%.gif' },
     find_command = {
         'rg',
         '--no-heading',
