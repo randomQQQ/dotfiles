@@ -13,3 +13,4 @@ rofi.color-urgent: #959DCB, #959DCB, #959DCB, #959DCB, #959DCB
 
 rofi.font: Ubuntu Mono 12
 rofi.hide-scrollbar: true
+

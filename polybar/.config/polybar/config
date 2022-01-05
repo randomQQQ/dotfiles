@@ -167,7 +167,7 @@ format-volume = <label-volume>
 label-volume =   %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = mute
+label-muted = 
 label-muted-foreground = ${root.foreground}
 
 format-underline = ${colors.four}
