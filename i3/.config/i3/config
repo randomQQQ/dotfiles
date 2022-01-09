@@ -41,20 +41,21 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 
 bindsym Print exec flameshot gui
+bindsym $mod+q exec killall ffmpeg
 
 # ЗАПУСК 
 bindsym $mod+Return exec kitty
 bindsym $mod+g exec chromium
 
-# floating_minimum_size 1000 x 700
-# floating_maximum_size 1000 x 700
+floating_minimum_size 1000 x 700
+floating_maximum_size 1000 x 700
 bindsym $mod+o exec --no-startup-id kitty --class floating
+bindsym $mod+r exec --no-startup-id kitty --class floating -e ranger
 for_window [instance="floating"] floating enabled
-for_window [instance="floating"] floating_minimum_size 1000 x 700
-for_window [instance="floating"] floating_maximum_size 1000 x 700
+for_window [instance="floating"] resize set 1000 700
 for_window [instance="floating"] move scratchpad; scratchpad show
 
-# for_window [class="^Pavucontrol$"] floating enable
+for_window [class="^Pavucontrol$"] floating enable
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
