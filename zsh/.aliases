@@ -10,5 +10,5 @@ alias ff=ffsend
 alias ssh='kitty +kitten ssh'
 alias python=python3
 alias ls='ls --color -h --group-directories-first'
-alias connect='bluetoothctl connect E0:9D:FA:BA:CE:0B'
-alias disconnect='bluetoothctl disconnect'
+alias headon='bluetoothctl connect E0:9D:FA:BA:CE:0B'
+alias headoff='bluetoothctl disconnect'
