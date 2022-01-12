@@ -12,3 +12,6 @@ alias python=python3
 alias ls='ls --color -h --group-directories-first'
 alias headon='bluetoothctl connect E0:9D:FA:BA:CE:0B'
 alias headoff='bluetoothctl disconnect'
+alias night='xrandr --output eDP1 --brightness 0.3'
+alias day='xrandr --output eDP1 --brightness 1'
+alias xprop='xprop | grep WM_CLASS'

@@ -59,6 +59,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Deluge"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Thunar"] floating enable
+for_window [class="vlc"] floating enable
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
