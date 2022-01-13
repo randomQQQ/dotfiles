@@ -21,8 +21,7 @@ floating_modifier $mod
 assign [class="Chromium"] $ws2
 assign [class="TelegramDesktop"] $ws2
 assign [class="Code"] $ws3
-assign [class="hyper"] $ws1
-assign [class="deluge"] $ws9
+assign [class="Deluge"] $ws4
 assign [class="Slack"] $ws9
 assign [class="discord"] $ws9
 assign [class="zoom"] $ws9
@@ -47,7 +46,7 @@ bindsym $mod+q exec killall ffmpeg
 bindsym $mod+Return exec kitty
 bindsym $mod+g exec chromium
 
-floating_minimum_size 1000 x 700
+# floating_minimum_size 1000 x 700
 floating_maximum_size 1000 x 700
 bindsym $mod+o exec --no-startup-id kitty --class floating
 bindsym $mod+r exec --no-startup-id kitty --class floating -e ranger
@@ -60,6 +59,8 @@ for_window [class="Deluge"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="vlc"] floating enable
+for_window [class="libreoffice"] floating enable
+for_window [class="GParted"] floating enable
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
