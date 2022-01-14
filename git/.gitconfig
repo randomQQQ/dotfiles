@@ -3,3 +3,5 @@
 	name = rndxx
 [core]
 	excludesFile = ~/.gitignore
+[commit]
+	verbose = true
