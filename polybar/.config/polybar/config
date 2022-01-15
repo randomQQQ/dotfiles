@@ -59,7 +59,7 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
 modules-left = i3
-modules-right = cpu memory pulseaudio xkeyboard wireless date bar
+modules-right = cpu memory pulseaudio xkeyboard wireless date bar record
 
 #tray-position = right
 #tray-padding = 2
@@ -172,7 +172,6 @@ label-muted-foreground = ${root.foreground}
 
 format-underline = ${colors.four}
 
-
 [global/wm]
 margin-top = 0
 margin-bottom = 0
@@ -200,4 +199,10 @@ format-disconnected-padding = 1
 format-connected = <label-connected>
 label-connected = %essid%
 label-disconnected = 
-; vim:ft=dosini
+
+[module/record]
+type = custom/script
+exec = ~/.config/polybar/modules/record.sh
+interval = 1
+format-foreground = #F07178
+
