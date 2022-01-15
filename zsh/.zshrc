@@ -20,6 +20,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Remap caps to escape
 setxkbmap -option caps:escape
+setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
 
 #Disable touchpad
 synclient TouchpadOff=1
