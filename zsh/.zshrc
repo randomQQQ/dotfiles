@@ -14,6 +14,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump zsh-vi-mode)
 export VISUAL=nvim;
 export EDITOR=nvim;
 export PSQL_EDITOR=/usr/local/bin/nvim
+export PATH="$HOME/bin:$PATH" 
 
 # Oh-my-zsh
 source $ZSH/oh-my-zsh.sh
