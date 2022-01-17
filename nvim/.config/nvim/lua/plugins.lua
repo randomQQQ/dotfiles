@@ -41,6 +41,7 @@ return packer.startup(function(use)
     use 'folke/which-key.nvim'
     use 'ahmedkhalf/project.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
+    use 'lyokha/vim-xkbswitch'
 
     use 'nvim-lua/plenary.nvim'
     use 'nvim-lua/popup.nvim'

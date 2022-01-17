@@ -189,6 +189,11 @@ _G.packer_plugins = {
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
+  ["vim-xkbswitch"] = {
+    loaded = true,
+    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/vim-xkbswitch",
+    url = "https://github.com/lyokha/vim-xkbswitch"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/which-key.nvim",
