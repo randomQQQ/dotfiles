@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -113,11 +118,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
-  ["nvim-autopairs"] = {
-    loaded = true,
-    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-bufferline.lua"] = {
     loaded = true,
@@ -193,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rnd/.local/share/nvim/site/pack/packer/start/vim-xkbswitch",
     url = "https://github.com/lyokha/vim-xkbswitch"
-  },
-  ["which-key.nvim"] = {
-    loaded = true,
-    path = "/home/rnd/.local/share/nvim/site/pack/packer/start/which-key.nvim",
-    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
