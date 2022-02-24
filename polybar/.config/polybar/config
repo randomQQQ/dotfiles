@@ -57,9 +57,10 @@ font-2 = siji:pixelsize=10;1
 font-3 = FontAwesome:pixelsize=12;1
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
+font-6 = Weather Icons:size=12;1
 
 modules-left = i3
-modules-right = cpu memory pulseaudio xkeyboard wireless date bar record
+modules-right = openweathermap-simple cpu memory pulseaudio xkeyboard wireless date bar record 
 
 #tray-position = right
 #tray-padding = 2
@@ -206,3 +207,8 @@ exec = ~/.config/polybar/modules/record.sh
 interval = 1
 format-foreground = #F07178
 
+[module/openweathermap-simple]
+type = custom/script
+exec = ~/.config/polybar/modules/openweathermap-simple.sh
+interval = 600
+label-font = 7
