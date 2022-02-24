@@ -92,11 +92,6 @@
   },
   {
     "key": "ctrl+space",
-    "command": "-editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+space",
     "command": "-toggleSuggestionDetails",
     "when": "suggestWidgetVisible && textInputFocus"
   },
@@ -307,10 +302,6 @@
   {
     "key": "ctrl+w",
     "command": "-workbench.action.closeActiveEditor"
-  },
-  {
-    "key": "alt+q",
-    "command": "editor.action.triggerParameterHints"
   },
   {
     "key": "ctrl+k ctrl+q",
@@ -528,22 +519,22 @@
     "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
     "when": "inFilesPicker && inQuickOpen"
   },
-  {
-    "key": "ctrl+h",
-    "command": "workbench.action.navigateLeft"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.navigateRight"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.navigateUp"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.navigateDown"
-  },
+  // {
+  //   "key": "ctrl+h",
+  //   "command": "workbench.action.navigateLeft"
+  // },
+  // {
+  //   "key": "ctrl+l",
+  //   "command": "workbench.action.navigateRight"
+  // },
+  // {
+  //   "key": "ctrl+k",
+  //   "command": "workbench.action.navigateUp"
+  // },
+  // {
+  //   "key": "ctrl+j",
+  //   "command": "workbench.action.navigateDown"
+  // },
   {
     "key": "ctrl+k",
     "command": "workbench.action.quickOpenNavigatePrevious",
@@ -554,4 +545,28 @@
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "inQuickOpen"
   },
+  {
+    "key": "shift+enter",
+    "command": "-python.execSelectionInTerminal",
+    "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "editor.action.triggerParameterHints"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "closeParameterHints",
+    "when": "editorFocus && parameterHintsVisible"
+  },
+  {
+    "key": "shift+escape",
+    "command": "-closeParameterHints",
+    "when": "editorFocus && parameterHintsVisible"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  }
 ]
