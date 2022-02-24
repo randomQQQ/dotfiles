@@ -85,13 +85,6 @@ h() {
   print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac --height "50%" | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
 
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv" 
-export PATH="$PYENV_ROOT/bin:$PATH" 
-eval "$(pyenv init --path)" 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # Aliases
 if [ -f ~/.aliases  ]; then
     . ~/.aliases
@@ -108,3 +101,12 @@ pastefinish() {
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv" 
+export PATH="$PYENV_ROOT/bin:$PATH" 
+eval "$(pyenv init --path)" 
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# function cht() { curl "cht.sh/$1"; }
