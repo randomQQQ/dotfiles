@@ -38,10 +38,8 @@
   "settingsSync.keybindingsPerPlatform": false,
   "editor.lightbulb.enabled": false,
   "git.autofetch": true,
-  "notebook.output.textLineLimit": 50,
   "workbench.list.automaticKeyboardNavigation": false,
   "editor.guides.highlightActiveIndentation": false,
-  "window.zoomLevel": 0.6,
   "editor.scrollBeyondLastLine": false,
   "workbench.colorTheme": "One Dark Pro",
   "window.menuBarVisibility": "hidden",
@@ -98,5 +96,9 @@
     "telemetry.telemetryLevel": "off",
     "editor.parameterHints.enabled": false,
     "python.analysis.typeCheckingMode": "basic",
+    "terminal.integrated.enablePersistentSessions": false,
+    "jupyter.askForKernelRestart": false,
+    "notebook.output.textLineLimit": 25,
+    "window.zoomLevel": 0.6,
 }
 
