@@ -109,4 +109,10 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# function cht() { curl "cht.sh/$1"; }
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/home/rnd/yandex-cloud/path.bash.inc' ]; then source '/home/rnd/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/home/rnd/yandex-cloud/completion.zsh.inc' ]; then source '/home/rnd/yandex-cloud/completion.zsh.inc'; fi
+
