@@ -20,8 +20,8 @@ map('n', 'x', '"_x', noremap)
 map('n', 's', '"_s', noremap)
 
 -- Make word uppercase
-map("n", "<C-u>", "viwU<ESC>", noremap)
-map("i", "<C-u>", "<ESC>viwUea", noremap)
+map("n", "<C-u>", "viw~<ESC>", noremap)
+map("i", "<C-u>", "<ESC>viw~ea", noremap)
 
 -- Save file
 map('n', '<leader>w', ':w! <cr>', noremap)

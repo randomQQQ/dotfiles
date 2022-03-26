@@ -8,8 +8,8 @@ nnoremap s "_s
 
 let g:mapleader=" "  
 
-nnoremap <C-u> viwU<Esc>
-inoremap <C-u> <ESC>viwUea
+nnoremap <C-u> viw~<Esc>
+inoremap <C-u> <ESC>viw~ea
 
 
 nnoremap 0p "0p
