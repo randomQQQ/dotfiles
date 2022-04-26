@@ -10,15 +10,14 @@ set-window-option -g window-status-current-style fg=#82AAFF,bg=default,bright
 # Right Status Bar: [Session Name][Date][Time]
 set -g status-right "%d-%b-%Y"
 
-set -g message-style bg='#292D3E',fg=#959DCB,bold
-set -g message-command-style bg='#292D3E',bold
+set -g message-style fg=#82AAFF,bold
+set -g message-command-style bg=#252837,bold
 
 # Set the inactive window color and style
-# set -g window-status-style fg=#899ca1,bg=default
 set -g window-status-format ' #I #W '
 
 # Set the active window color and style
-set -g window-status-current-style fg=black,bg=#959DCB
+set -g window-status-current-style bg=#292D3E,fg=#82AAFF
 set -g window-status-current-format ' #I #W '
 
 # window modes color (e.g. choosing window: <prefix>w / escape mode)
