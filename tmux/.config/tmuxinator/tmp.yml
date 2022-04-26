@@ -1,0 +1,13 @@
+name: start
+root: ~/
+
+windows:
+  - zsh:
+      panes:
+          - clear
+
+  - ranger:
+      panes:
+          - ranger:
+              - clear
+              - ranger

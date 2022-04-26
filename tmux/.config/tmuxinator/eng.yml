@@ -1,0 +1,13 @@
+# /home/rnd/.config/tmuxinator/test-tmux.yml
+
+name: eng
+root: ~/Documents/english/murphy
+
+windows:
+  - editor:
+      layout: ee19,104x52,0,0{58x52,0,0,0,45x52,59,0,1}
+      panes:
+        - kitty:
+            - clear
+        - nvim:
+            - nvim words/02-words

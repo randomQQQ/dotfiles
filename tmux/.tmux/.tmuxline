@@ -15,11 +15,13 @@ set -g message-style fg=#82AAFF,bold
 set -g message-command-style bg=#252837,bold
 
 # Set the inactive window color and style
-set -g window-status-format ' #I #W '
+# set -g window-status-format ' #I #W '
+set -g window-status-format ' #W '
 
 # Set the active window color and style
 set -g window-status-current-style bg=#252837,fg=#C792EA
-set -g window-status-current-format ' #I #W '
+# set -g window-status-current-format ' #I #W '
+set -g window-status-current-format ' #W '
 
 # window modes color (e.g. choosing window: <prefix>w / escape mode)
 setw -g mode-style bg=#959DCB,fg=#252837
