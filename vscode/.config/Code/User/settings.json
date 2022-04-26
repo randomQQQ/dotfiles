@@ -10,11 +10,10 @@
   "editor.minimap.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "workbench.colorCustomizations": {
-    "editorError.foreground": "#00000000",
-    "editorWarning.foreground": "#00000000",
-    "editorInfo.foreground": "#00000000",
+    // "editorError.foreground": "#00000000",
+    // "editorWarning.foreground": "#00000000",
+    // "editorInfo.foreground": "#00000000",
     "editor.snippetTabstopHighlightBackground": "#00000000",
-
   },
   "python.languageServer": "Pylance",
   "editor.suggestSelection": "first",
@@ -97,10 +96,14 @@
     "workbench.iconTheme": "material-icon-theme",
     "telemetry.telemetryLevel": "off",
     "editor.parameterHints.enabled": false,
-    "python.analysis.typeCheckingMode": "basic",
     "terminal.integrated.enablePersistentSessions": false,
     "jupyter.askForKernelRestart": false,
     "notebook.output.textLineLimit": 25,
     "window.zoomLevel": 0.6,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "scm.diffDecorations": "none",
+    "python.formatting.provider": "black",
+    // "cSpell.language": "en,ru",
 }
 

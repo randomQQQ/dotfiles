@@ -586,5 +586,9 @@
   {
     "key": "f9",
     "command": "notebook.cell.toggleLineNumbers"
+  },
+  {
+    "key": "f4",
+    "command": "python.enableLinting"
   }
 ]
