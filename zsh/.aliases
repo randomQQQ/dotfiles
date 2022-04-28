@@ -15,3 +15,4 @@ alias headoff='bluetoothctl disconnect'
 alias night='xrandr --output eDP1 --brightness 0.3'
 alias day='xrandr --output eDP1 --brightness 1'
 alias xprop='xprop | grep WM_CLASS'
+alias mux=tmuxinator

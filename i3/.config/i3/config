@@ -115,9 +115,6 @@ bindsym $mod+Shift+space floating toggle
 # ПЕРЕКЛЮЧЕНИЕ ФОКУСА С ПЛАВАЮЩИХ ОКОН НА ТАЙЛИНГ
 bindsym $mod+space focus mode_toggle
 
-# ЯХЗ ЧТО ЭТО ТАКОЕ
-bindsym $mod+a focus parent
-
 # ЭТО НЕ НУЖНО РАСКОМЕНТИРОВАТЬ, КОМБИНАЦИЯ КЛАВИШ КОПИРУЕТ
 # КОМБИНАЦИЮ КЛАВИШЬ ЗАПУСКА DMENU
 #bindsym $mod+d focus child

@@ -13,7 +13,7 @@ gl.short_line_list = { 'NvimTree', 'alpha' }
 left[1] = {
   Separator = {
     provider = function() return '▊ ' end,
-    highlight = {colors.blue,colors.bg}
+    highlight = {colors.bg,colors.bg}
   }
 }
 
@@ -160,7 +160,7 @@ right[7] = {
 right[8] = {
   RightSeparator = {
     provider = function() return ' ▊' end,
-    highlight = {colors.blue,colors.bg}
+    highlight = {colors.bg,colors.bg}
   }
 }
 
