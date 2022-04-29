@@ -32,31 +32,29 @@ return packer.startup(function(use)
     use 'kaicataldo/material.vim'
     use 'tpope/vim-commentary'
     use 'tpope/vim-surround'
-    -- use 'windwp/nvim-autopairs'
     use 'jiangmiao/auto-pairs'
     use 'glepnir/galaxyline.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use 'norcalli/nvim-colorizer.lua'
-    use 'kyazdani42/nvim-tree.lua'
+    -- use 'kyazdani42/nvim-tree.lua'
     use 'akinsho/nvim-bufferline.lua'
-    -- use 'folke/which-key.nvim'
-    use 'ahmedkhalf/project.nvim'
-    use 'jose-elias-alvarez/null-ls.nvim'
+    -- use 'ahmedkhalf/project.nvim'
+    -- use 'jose-elias-alvarez/null-ls.nvim'
     use 'lyokha/vim-xkbswitch'
-
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-lua/popup.nvim'
-    use 'nvim-telescope/telescope.nvim'
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+    use {'neoclide/coc.nvim', branch = 'release'}
+    -- use 'nvim-lua/plenary.nvim'
+    -- use 'nvim-lua/popup.nvim'
+    -- use 'nvim-telescope/telescope.nvim'
+    -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
     use 'goolord/alpha-nvim'
 
-    use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
-    use 'onsails/lspkind-nvim'
+    -- use 'neovim/nvim-lspconfig'
+    -- use 'hrsh7th/cmp-nvim-lsp'
+    -- use 'hrsh7th/cmp-buffer'
+    -- use 'hrsh7th/cmp-path'
+    -- use 'hrsh7th/cmp-cmdline'
+    -- use 'hrsh7th/nvim-cmp'
+    -- use 'onsails/lspkind-nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
