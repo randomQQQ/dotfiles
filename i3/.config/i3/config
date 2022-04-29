@@ -12,13 +12,13 @@ exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
 exec kitty 
 exec kitty
 exec telegram-desktop
-exec chromium 
+exec google-chrome 
 
 # Переместить окно
 floating_modifier $mod
 
 # ПРИВЯЗКА К ВОРКСПЕЙСАМ
-assign [class="Chromium"] $ws2
+assign [class="Google-chrome"] $ws2
 assign [class="TelegramDesktop"] $ws2
 assign [class="Code"] $ws3
 assign [class="jetbrains-datagrip"] $ws3
@@ -45,7 +45,7 @@ bindsym $mod+q exec killall ffmpeg
 
 # ЗАПУСК 
 bindsym $mod+Return exec kitty
-bindsym $mod+g exec chromium
+bindsym $mod+g exec google-chrome
 
 # floating_minimum_size 1000 x 700
 floating_maximum_size 1000 x 700
