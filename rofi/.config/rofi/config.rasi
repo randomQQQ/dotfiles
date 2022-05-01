@@ -5,7 +5,7 @@
  *******************************************************************************/
 
 * {
-    selected-normal-foreground:  #959DCB;
+    selected-normal-foreground:  #252837;
     foreground:                  #959DCB;
     normal-foreground:           @foreground;
     alternate-normal-background: #252837;
@@ -21,7 +21,7 @@
     alternate-normal-foreground: @foreground;
     normal-background:           #252837;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 57, 66, 73, 100 % );
+    selected-normal-background:  #959DCB;
     border-color:                @foreground;
     spacing:                     2;
     separatorcolor:              rgba ( 30, 37, 41, 100 % );

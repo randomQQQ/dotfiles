@@ -72,7 +72,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+q kill
 
 # ЗАПУСК DMENU ИЛИ ROFI
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -show run -no-show-match false
 
 # СМЕНА ФОКУСА НА ДРУГОЕ ОКНО
 bindsym $mod+h focus left
