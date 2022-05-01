@@ -11,6 +11,9 @@ local opt = vim.opt             -- global/buffer/windows-scoped options
 -- General
 -----------------------------------------------------------
 g.mapleader = ' '              -- change leader to a comma
+g.loaded_ruby_provider = 0
+g.loaded_node_provider = 0
+g.loaded_perl_provider = 0
 opt.clipboard = 'unnamedplus'  -- copy/paste to system clipboard
 opt.swapfile = false           -- don't use swapfile
 opt.backup = false             -- creates a backup file
