@@ -15,6 +15,7 @@ export VISUAL=nvim;
 export EDITOR=nvim;
 export PSQL_EDITOR=/usr/local/bin/nvim
 export PATH="$HOME/bin:$PATH" 
+export PATH="$HOME.local/bin:$PATH"
 
 # Oh-my-zsh
 source $ZSH/oh-my-zsh.sh
