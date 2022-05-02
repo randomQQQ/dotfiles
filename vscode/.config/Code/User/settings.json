@@ -102,5 +102,9 @@
     "notebook.output.textLineLimit": 25,
     "window.zoomLevel": 0.6,
     "oneDarkPro.italic": false,
+    "scm.diffDecorations": "none",
+    "explorer.decorations.colors": false,
+    "workbench.editor.decorations.badges": false,
+    "workbench.editor.decorations.colors": false,
 }
 
