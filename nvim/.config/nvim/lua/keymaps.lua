@@ -76,4 +76,6 @@ map('n', '<leader>fm', '<cmd>Telescope marks<cr>', noremap)
 map('i', '<F1>', '<Nop>', noremap)
 map('n', '<F1>', '<Nop>', noremap)
 
--- map('n', '<leader>fd', '<cmd>Telescope find_files search_dirs=["~/Documents/repositories"] <CR>', noremap)
+--Ubuntu-init
+-- map('n', '<leader>i', ":e /media/backup/ubuntu-init.md <CR>", noremap)
+

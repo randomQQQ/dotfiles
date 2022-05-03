@@ -47,11 +47,13 @@ return packer.startup(function(use)
     -- use 'nvim-telescope/telescope.nvim'
     use 'goolord/alpha-nvim'
 
-    use({
-        "nvim-telescope/telescope.nvim", 
-        requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
-	})
+    use "nvim-telescope/telescope.nvim" 
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+    use "nvim-lua/popup.nvim" 
+    use "nvim-lua/plenary.nvim"
+
+    
+
     -- use 'neovim/nvim-lspconfig'
     -- use 'hrsh7th/cmp-nvim-lsp'
     -- use 'hrsh7th/cmp-buffer'
