@@ -18,3 +18,4 @@ alias xprop='xprop | grep WM_CLASS'
 alias mux=tmuxinator
 alias gotop=gotop-brlin
 alias ttl='sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65'
+alias dud='du -h -d 1'
