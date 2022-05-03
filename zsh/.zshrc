@@ -87,7 +87,7 @@ h() {
 }
 
 # Aliases
-if [ -f ~/.aliases  ]; then
+if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 

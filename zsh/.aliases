@@ -16,3 +16,5 @@ alias night='xrandr --output eDP-1 --brightness 0.3'
 alias day='xrandr --output eDP-1 --brightness 1'
 alias xprop='xprop | grep WM_CLASS'
 alias mux=tmuxinator
+alias gotop=gotop-brlin
+alias ttl='sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65'
