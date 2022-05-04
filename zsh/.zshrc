@@ -8,14 +8,14 @@ ZSH_THEME="robbyrussell"
 setopt hist_ignore_all_dups
 
 # Plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump zsh-vi-mode poetry)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump zsh-vi-mode poetry docker docker-compose)
 
 # Environment variables set everywhere
 export VISUAL=nvim;
 export EDITOR=nvim;
 export PSQL_EDITOR=/usr/local/bin/nvim
-export PATH="$HOME/bin:$PATH" 
-export PATH="$HOME.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -112,11 +112,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)" 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
-# The next line updates PATH for Yandex Cloud CLI.
-if [ -f '/home/rnd/yandex-cloud/path.bash.inc' ]; then source '/home/rnd/yandex-cloud/path.bash.inc'; fi
-
-# The next line enables shell command completion for yc.
-if [ -f '/home/rnd/yandex-cloud/completion.zsh.inc' ]; then source '/home/rnd/yandex-cloud/completion.zsh.inc'; fi
-
 
