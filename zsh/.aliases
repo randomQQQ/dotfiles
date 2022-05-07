@@ -16,8 +16,8 @@ alias day='xrandr --output eDP-1 --brightness 1'
 alias xprop='xprop | grep WM_CLASS'
 alias mux=tmuxinator
 alias gotop=gotop-brlin
-alias ttl='sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65'
-alias dud='du -h -d 1 | sort -n -r' 
+alias ttl="sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65 && echo '-> ttl default 65'"
+alias dud='du -h -d 1 | sort -hr' 
 alias mkdir="mkdir -p"
 
 # copy working directory
