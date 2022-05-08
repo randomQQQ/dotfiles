@@ -1,6 +1,6 @@
 alias update='source ~/.zshrc'
 alias config='vim ~/.zshrc'
-alias al='vim ~/.aliases'
+alias al='vim ~/.aliases.zsh'
 alias uu='sudo apt update && sudo apt -y upgrade'
 alias path="echo $PATH | tr : '\n'"
 alias vim=nvim
@@ -16,7 +16,7 @@ alias day='xrandr --output eDP-1 --brightness 1'
 alias xprop='xprop | grep WM_CLASS'
 alias mux=tmuxinator
 alias gotop=gotop-brlin
-alias ttl="sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65 && echo '-> ttl default 65'"
+alias ttl="sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65 && echo '-> ttl 65'"
 alias dud='du -h -d 1 | sort -hr' 
 alias mkdir="mkdir -p"
 
@@ -27,9 +27,13 @@ alias cwd='pwd | tr -d "\r\n" | xclip -selection clipboard'
 alias untar='tar xvf'
 
 # Pipe my public key to my clipboard.
-alias pubkey="cat ~/.ssh/id_rsa.pub | xclip -selection clipboard | echo '=> Public key copied to pasteboard.'"
+alias pubkey="cat ~/.ssh/id_rsa.pub | xclip -selection clipboard | echo '-> Public key copied to pasteboard.'"
 
 # SSH kitty
 if [[ $TERM == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
 fi
+
+# docker
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'

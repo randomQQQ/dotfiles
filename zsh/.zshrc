@@ -88,8 +88,8 @@ h() {
 }
 
 # Aliases
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+if [ -f ~/.aliases.zsh ]; then
+    . ~/.aliases.zsh
 fi
 
 # This speeds up pasting w/ autosuggest
