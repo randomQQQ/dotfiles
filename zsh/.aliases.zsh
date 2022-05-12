@@ -11,8 +11,8 @@ alias python=python3
 alias ls='ls --color -h --group-directories-first'
 alias headon='bluetoothctl connect E0:9D:FA:BA:CE:0B'
 alias headoff='bluetoothctl disconnect'
-alias night='xrandr --output eDP-1 --brightness 0.3'
-alias day='xrandr --output eDP-1 --brightness 1'
+alias night='xrandr --output eDP-1-1 --brightness 0.3 && shutdown +60'
+alias day='xrandr --output eDP-1-1 --brightness 1'
 alias xprop='xprop | grep WM_CLASS'
 alias mux=tmuxinator
 alias gotop=gotop-brlin
@@ -37,3 +37,6 @@ fi
 # docker
 alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
+
+# ports
+alias ports='sudo lsof -i -P -n | grep LISTEN'
