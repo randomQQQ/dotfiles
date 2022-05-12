@@ -2,7 +2,7 @@
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "newUntitledFile",
   "keyboard.dispatch": "keyCode",
-  "editor.fontFamily": "'Fira code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontLigatures": true,
   "editor.selectionHighlight": false,
   "editor.occurrencesHighlight": false,
@@ -107,5 +107,6 @@
     "workbench.editor.decorations.badges": false,
     "workbench.editor.decorations.colors": false,
     "editor.bracketPairColorization.enabled": false,
+    "python.formatting.provider": "yapf"
 }
 
