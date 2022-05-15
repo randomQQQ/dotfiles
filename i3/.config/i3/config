@@ -12,6 +12,7 @@ exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
 exec kitty 
 exec kitty
 exec telegram-desktop
+# exec __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia google-chrome 
 exec google-chrome 
 
 # Переместить окно
@@ -46,6 +47,7 @@ bindsym $mod+q exec killall ffmpeg
 # ЗАПУСК 
 bindsym $mod+Return exec kitty
 bindsym $mod+g exec google-chrome
+# bindsym $mod+g exec __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia google-chrome
 
 # floating_minimum_size 1000 x 700
 floating_maximum_size 1000 x 700
