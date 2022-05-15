@@ -8,6 +8,8 @@ windows:
 
   - nvim:
       panes:
-          - ranger:
-              - nvim words/02-words
+          - nvim words/02-words
 
+  - nvim:
+      panes:
+          - nvim words/irragular
