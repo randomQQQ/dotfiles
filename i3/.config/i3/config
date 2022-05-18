@@ -22,7 +22,7 @@ floating_modifier $mod
 assign [class="TelegramDesktop"] $ws2
 assign [class="Google-chrome"] $ws2
 assign [class="Code"] $ws3
-assign [class="jetbrains-datagrip"] $ws3
+assign [class="jetbrains-datagrip"] $ws4
 assign [class="Deluge"] $ws4
 assign [class="Slack"] $ws9
 assign [class="discord"] $ws9
@@ -81,12 +81,6 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
-# АЛЬТЕРНАТИВНАЯ СМЕНА ФОКУСА НА ДРУГОЕ ОКНО
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right  
 
 # ГОРИЗОНТАЛЬНАЯ ОРИЕНТАЦИЯ НОВОГО ОКНА
 bindsym $mod+u split h
