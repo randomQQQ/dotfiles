@@ -40,3 +40,6 @@ alias dcd='docker-compose down'
 
 # ports
 alias ports='sudo lsof -i -P -n | grep LISTEN'
+
+# restart wifi
+alias wifi-restart='nmcli radio wifi off && nmcli radio wifi on'
