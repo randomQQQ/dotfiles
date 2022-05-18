@@ -6,10 +6,10 @@ windows:
       panes:
           - clear
 
-  - nvim:
+  - words:
       panes:
           - nvim words/02-words
 
-  - nvim:
+  - irragular:
       panes:
           - nvim words/irragular
