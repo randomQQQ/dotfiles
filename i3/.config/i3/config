@@ -52,7 +52,7 @@ bindsym $mod+g exec google-chrome
 # floating_minimum_size 1000 x 700
 floating_maximum_size 1000 x 700
 bindsym $mod+o exec --no-startup-id kitty --class floating
-bindsym $mod+r exec --no-startup-id kitty --class floating -e ranger
+bindsym $mod+r exec --no-startup-id kitty --class floating -e calcure
 for_window [instance="floating"] floating enabled, move position center
 for_window [instance="floating"] resize set 1000 700
 for_window [instance="floating"] move scratchpad; scratchpad show
@@ -74,7 +74,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+q kill
 
 # ЗАПУСК DMENU ИЛИ ROFI
-bindsym $mod+d exec --no-startup-id rofi -show run -no-show-match false -font "FiraCode 12"
+bindsym $mod+d exec --no-startup-id rofi -show run -no-show-match false -font "FiraCode 11.4"
 
 # СМЕНА ФОКУСА НА ДРУГОЕ ОКНО
 bindsym $mod+h focus left
